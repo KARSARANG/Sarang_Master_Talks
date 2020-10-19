@@ -1,5 +1,5 @@
-import service1.py
-import service2.py
+import Service1
+#import service2.py
 import random
 #ListOfWelcomeMessages contains different welcome messages
 ListOfWelcomeMessages = ['Hello Friend, My hearty welcome to you','Namaste, I welcome to my world']
@@ -37,11 +37,11 @@ while(ch1=='Y'):
                 try:
                     subChoice = int(input())
                     if (subChoice == 1):
-                        displayMathsQuiz()
+                        Service1.displayMathsQuiz()
                     elif (subChoice == 2):
-                        displayBiologyQuiz()
+                        Service1.displaybioquiz()
                     elif (subChoice == 3):
-                        displayChemistryQuiz()
+                        Service1.displayChemQuiz()
                     else:
                         print("Wrong entry")
                     ch2 = input(("Do you want to continue with another quiz?(Y/N)"))
