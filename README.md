@@ -12,3 +12,4 @@ If the user selects Medicine as goal, it measures efficiency of user w.r.t his /
 If the user selects Engineering as goal, it measures efficiency of user w.r.t his / her public speaking skills, innovation skills and suggests if any improvement is needed. 
 
 # Block Diagram
+![]()
