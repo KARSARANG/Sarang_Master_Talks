@@ -1,5 +1,5 @@
 import Service1
-#import service2.py
+import Service2
 import random
 #ListOfWelcomeMessages contains different welcome messages
 ListOfWelcomeMessages = ['Hello Friend, My hearty welcome to you','Namaste, I welcome to my world']
@@ -26,9 +26,8 @@ elif (current_time >15):
     print("Good Evening",name,"!","Once again welcome you")
 ch1 = 'Y'
 while(ch1=='Y'):
-    print("Here is the list of services that I can extend to you. \n Please let me know which one of these you would like me to do\n1. I can let you know your level of expertise in a particular subject.\n2. I can let you know skill gap if you tell me your goal.\n3. Exit")
+    menuItem=int(input("Here is the list of services that I can extend to you. \n 1. I can let you know your level of expertise in a particular subject.\n2. I can let you know skill gap if you tell me your goal.Please enter 1 or 2:"))
     try:
-        menuItem = int(input("Please enter your choice: 1, 2 0r 3:\n"))
         if(menuItem == 1):
             ch2 = 'Y'
             while(ch2=='Y'):
@@ -44,9 +43,15 @@ while(ch1=='Y'):
                         Service1.displayChemQuiz()
                     else:
                         print("Wrong entry")
-                    ch2 = input(("Do you want to continue with another quiz?(Y/N)"))
+                    ch2 = input(("Do you want to continue with another quiz?(Y/N):"))
                 except ValueError:
                     print("No valid integer! Please try again ...")
+        elif (menuItem == 2):
+            goalChoice = int(input("Please enter what is your goal.\n1. I want to become Doctor\n2. I want to become Engineer\nPlease enter 1 or 2:"))
+            if (goalChoice == 1):
+                Service2.medicalGoal()
+            elif(goalChoice == 2):
+                Service2.displayEnggGoal()
     except ValueError:
         print("No valid integer! Please try again ...")
     ch1 = input("Do you want me to provide another service?Y/N")
